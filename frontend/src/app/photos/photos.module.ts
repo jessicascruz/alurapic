@@ -1,21 +1,15 @@
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-
-import { PhotoComponent } from './photo/photo.component';
-import { PhotoListComponent } from './photo-list/photo-list.component';
-import { CommonModule } from '@angular/common';
-import { PhotosComponent } from './photo-list/photos/photos.component';
-import { FilterByDescription } from './photo-list/filter-by-description.pipe';
-import { LoadButtonComponent } from './photo-list/load-button/load-button.component';
+import { PhotoModule } from './photo/photo.module';
+import { PhotoFormModule } from './photo-form/photo-form.module';
+import { PhotoListModule } from './photo-list/photo-list.module';
+import { CardModule } from '../shared/components/card/card.module';
 
 @NgModule({
-    declarations: [
-        PhotoComponent,
-        PhotoListComponent,
-        PhotosComponent,
-        FilterByDescription,
-        LoadButtonComponent
-    ],
-    imports: [ HttpClientModule, CommonModule ]
+    imports: [
+        PhotoModule,
+        PhotoFormModule,
+        PhotoListModule,
+        CardModule
+    ]
 })
-export class PhotosModule { }
+export class PhotosModule {}
